@@ -1,0 +1,28 @@
+.page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.hello {
+
+    padding: 0.5rem;
+    margin: 0.5rem;
+}
+
+.hello a {
+    color: var(--on-primary);
+    text-decoration: none;
+
+    font-size: x-large;
+    font-weight: bold;
+    background-color: var(--color-primary-300);
+    border-radius: var(--theme-rounded-base);
+    padding: 0.5rem;
+    margin: 0.5rem;
+    transition: background-color 0.3s ease;
+}
+
+.hello :hover {
+    background-color: var(--color-primary-400);
+}

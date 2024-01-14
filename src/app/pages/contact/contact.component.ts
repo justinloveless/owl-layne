@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
+import { EmailFormComponent } from 'src/app/shared/email-form/email-form.component';
 
 @Component({
   selector: 'app-contact',
   standalone: true,
-  imports: [],
+  imports: [EmailFormComponent],
   templateUrl: './contact.component.html',
   styleUrl: './contact.component.scss'
 })
