@@ -7,33 +7,16 @@
     -moz-osx-font-smoothing: grayscale;
 }
 
-.social-link-container {
+
+.title {
     display: flex;
-    flex-direction: row;
-    height: 100%;
-    align-items: center;
-
+    justify-content: center;
 }
 
-.social-link {
-    font-size: 2rem;
-    padding-right: 1rem;
-}
-
-.social-link a {
-    color: var(--color-primary-700);
-}
-
-#instagram-link a {
-    color: var(--color-primary-700);
-}
-
-#tiktok-link a {
-    color: var(--color-primary-700);
-}
-
-#soundcloud-link a {
-    color: var(--color-primary-700);
+.title #title-text {
+    font-family: raleway-semibold, raleway, sans-serif;
+    font-size: 3.5rem;
+    margin: 0;
 }
 
 
@@ -47,9 +30,14 @@
 .header {
     flex-shrink: 0;
     flex-grow: 0;
-    display: flex;
+    display: grid;
+    grid-template-areas: '. main right';
     background: var(--color-tertiary-500);
     padding: 3px 5px;
+}
+
+#header-content {
+    grid-area: main;
 }
 
 .content {
@@ -67,24 +55,30 @@
     padding: 3px 15px;
 }
 
+.nav-link-container {
+    display: inline-flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-evenly;
+    gap: 1em;
+}
 
 nav a {
-    padding: 5px 10px;
+    padding: 1.25rem 3rem;
     text-decoration: none;
-    margin-top: 10px;
     display: inline-block;
-    background-color: var(--color-tertiary-300);
+    background-color: none;
     border-radius: var(--theme-rounded-container);
 }
 
 nav a:visited,
 a:link {
-    color: #607D8B;
+    color: var(--color-surface-500);
 }
 
 nav a:hover {
-    color: #039be5;
-    background-color: #CFD8DC;
+    color: var(--color-primary-700);
+    background-color: var(--color-surface-200);
 }
 
 nav a.active {
