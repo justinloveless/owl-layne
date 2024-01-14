@@ -1,0 +1,14 @@
+<form class="contact-form" (submit)="sendEmail($event)">
+    <div class="form-container">
+        <label class="form-label">Name</label>
+        <input class="form-field" type="text" name="from_name">
+        <label class="form-label">Email</label>
+        <input class="form-field" type="email" name="reply_to">
+        <label class="form-label">Subject</label>
+        <input class="form-field" type="text" name="subject">
+        <label class="form-label">Message</label>
+        <textarea class="form-field-area" name="message"></textarea>
+        <div></div> <!-- spacer just to ensure the button is on the right-->
+        <input class="form-btn" type="submit" value="Send">
+    </div>
+</form>
