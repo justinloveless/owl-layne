@@ -5,6 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { SocialLinksComponent } from './shared/social-links/social-links.component';
 import { HttpClientModule } from '@angular/common/http';
+import { APP_BASE_HREF, PlatformLocation } from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,11 @@ import { HttpClientModule } from '@angular/common/http';
     SocialLinksComponent,
     HttpClientModule
   ],
-  providers: [],
+  providers: [{
+    provide: APP_BASE_HREF,
+    useFactory: (s: PlatformLocation) => s.getBaseHrefFromDOM(),
+    deps: [PlatformLocation]
+  }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
