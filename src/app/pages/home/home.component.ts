@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import { APP_BASE_HREF } from '@angular/common';
+import { Component, Inject } from '@angular/core';
+
 
 @Component({
   selector: 'app-home',
@@ -8,5 +10,11 @@ import { Component } from '@angular/core';
   styleUrl: './home.component.scss'
 })
 export class HomeComponent {
+  /**
+   *
+   */
+  constructor(@Inject(APP_BASE_HREF) public baseHref: string) {
+    console.log('baseHref', baseHref);
 
+  }
 }
