@@ -1,4 +1,4 @@
-import { Component } from './component';
+import { Component } from '../component';
 import { FormProperties } from './form-properties';
 
 export class Form implements Component {

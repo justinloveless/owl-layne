@@ -1,11 +1,17 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { PageService } from 'src/app/services/page.service';
-import { Page } from 'src/app/types/page';
+import { Page } from 'src/app/components/page/page';
+import { FormComponent } from '../form/form.component';
+import { HeaderComponent } from '../header/header.component';
+import { ImageComponent } from '../image/image.component';
+import { ParagraphComponent } from '../paragraph/paragraph.component';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-page',
-  standalone: false,
+  standalone: true,
+  imports: [FormComponent, HeaderComponent, ImageComponent, ParagraphComponent, CommonModule],
   templateUrl: './page.component.html',
   styleUrl: './page.component.scss',
 })
@@ -15,7 +21,7 @@ export class PageComponent implements OnInit {
   constructor(
     private route: ActivatedRoute,
     private pageService: PageService
-  ) {}
+  ) { }
 
   ngOnInit(): void {
     this.route.paramMap.subscribe((params) => {

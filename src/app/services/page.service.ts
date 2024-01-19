@@ -1,6 +1,6 @@
 import { Inject, Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { Page } from '../types/page';
+import { Page } from '../components/page/page';
 import { HttpClient } from '@angular/common/http';
 import { APP_BASE_HREF } from '@angular/common';
 
@@ -11,11 +11,11 @@ export class PageService {
   constructor(
     @Inject(APP_BASE_HREF) public baseHref: string,
     private http: HttpClient
-  ) {}
+  ) { }
 
   getPageData(): Observable<{ pages: Page[] }> {
     return this.http.get<{ pages: Page[] }>(
-      '.' + this.baseHref + '../assets/test.json'
+      '.' + this.baseHref + '../assets/pageData.json'
     );
   }
 }

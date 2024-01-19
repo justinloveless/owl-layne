@@ -1,9 +1,10 @@
 import { Component, Input } from '@angular/core';
-import { ImageProperties } from 'src/app/types/image-properties';
+import { ImageProperties } from 'src/app/components/image/image-properties';
 
 @Component({
   selector: 'app-image',
-  standalone: false,
+  standalone: true,
+  imports: [],
   templateUrl: './image.component.html',
   styleUrl: './image.component.scss',
 })

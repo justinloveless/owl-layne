@@ -6,7 +6,6 @@ import { AppComponent } from './app.component';
 import { SocialLinksComponent } from './shared/social-links/social-links.component';
 import { HttpClientModule } from '@angular/common/http';
 import { APP_BASE_HREF, PlatformLocation } from '@angular/common';
-import { ComponentsModule } from './components/components.module';
 
 @NgModule({
   declarations: [AppComponent],
@@ -15,7 +14,6 @@ import { ComponentsModule } from './components/components.module';
     AppRoutingModule,
     SocialLinksComponent,
     HttpClientModule,
-    ComponentsModule,
   ],
   providers: [
     {
@@ -26,4 +24,4 @@ import { ComponentsModule } from './components/components.module';
   ],
   bootstrap: [AppComponent],
 })
-export class AppModule {}
+export class AppModule { }
