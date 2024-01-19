@@ -64,6 +64,10 @@
         },
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
+          "assets": [
+            "src/favicon.ico",
+            "src/assets"
+          ],
           "configurations": {
             "production": {
               "browserTarget": "owl-layne:build:production"
