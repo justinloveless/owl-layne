@@ -6,13 +6,15 @@
       </div>
       <nav>
         <div class="nav-link-container">
+            <a routerLink="/page/home">Dynamic Home</a>
+            <a routerLink="/page/contact">Dynamic Contact</a>
           <a routerLink="/home">Home</a>
           <a routerLink="/videos">Live Performances</a>
           <a routerLink="/contact">Contact</a>
         </div>
       </nav>
     </div>
-    <app-social-links style="grid-area: right;"></app-social-links>
+    <app-social-links style="grid-area: right"></app-social-links>
   </div>
   <div class="content">
     <router-outlet></router-outlet>

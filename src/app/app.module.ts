@@ -8,20 +8,20 @@ import { HttpClientModule } from '@angular/common/http';
 import { APP_BASE_HREF, PlatformLocation } from '@angular/common';
 
 @NgModule({
-  declarations: [
-    AppComponent
-  ],
+  declarations: [AppComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
     SocialLinksComponent,
-    HttpClientModule
+    HttpClientModule,
   ],
-  providers: [{
-    provide: APP_BASE_HREF,
-    useFactory: (s: PlatformLocation) => s.getBaseHrefFromDOM(),
-    deps: [PlatformLocation]
-  }],
-  bootstrap: [AppComponent]
+  providers: [
+    {
+      provide: APP_BASE_HREF,
+      useFactory: (s: PlatformLocation) => s.getBaseHrefFromDOM(),
+      deps: [PlatformLocation],
+    },
+  ],
+  bootstrap: [AppComponent],
 })
 export class AppModule { }
