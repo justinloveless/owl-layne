@@ -1,7 +1,8 @@
 import {Page} from "./page/page";
+import {Theme} from "./theme";
 
 export class SiteData {
     pages?: Page[];
-    theme?: any;
+    theme?: Theme;
     data?: any;
 }

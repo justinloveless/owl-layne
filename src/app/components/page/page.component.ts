@@ -36,7 +36,7 @@ export class PageComponent implements OnInit {
   }
 
   loadPage(pageId: string): void {
-    this.pageService.getPageData().subscribe((result) => {
+    this.pageService.getSiteData().subscribe((result) => {
       console.log('pages', result.pages);
 
       this.page = result.pages?.find((p) => p.pageId === pageId);

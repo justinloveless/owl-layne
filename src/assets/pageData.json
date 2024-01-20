@@ -91,5 +91,22 @@
                 }
             ]
         }
-    ]
+    ],
+    "theme": {
+        "colorPrimary": "#708e96",
+        "colorSecondary": null,
+        "colorTertiary": null,
+        "colorSurface": null,
+        "colorSuccess": null,
+        "colorWarning": null,
+        "colorError": null,
+        "colorTextDark": null,
+        "colorTextLight": null,
+        "fontSize": null,
+        "roundedBase": null,
+        "roundedContainer": null,
+        "borderSize": null,
+        "fontFamily": null
+        
+    }
 }

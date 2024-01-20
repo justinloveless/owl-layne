@@ -13,9 +13,20 @@ export class PageService {
     private http: HttpClient
   ) { }
 
-  getPageData(): Observable<SiteData> {
+  getSiteData(): Observable<SiteData> {
     return this.http.get<SiteData>(
       '.' + this.baseHref + '../assets/pageData.json'
     );
   }
+  
+  loadTheme(siteData: SiteData) {
+    const themeData = siteData.theme;
+    console.log('theme:', themeData);
+    if (themeData === undefined) return
+    if (themeData.colorPrimary) {
+      document.documentElement.style.setProperty(`--color-surface-500`, themeData.colorPrimary);
+      console.log('set surface color ')
+    }
+  }
+  
 }
