@@ -1,8 +1,8 @@
 import { Inject, Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { Page } from '../components/page/page';
 import { HttpClient } from '@angular/common/http';
 import { APP_BASE_HREF } from '@angular/common';
+import {SiteData} from "../components/site-data";
 
 @Injectable({
   providedIn: 'root',
@@ -13,8 +13,8 @@ export class PageService {
     private http: HttpClient
   ) { }
 
-  getPageData(): Observable<{ pages: Page[] }> {
-    return this.http.get<{ pages: Page[] }>(
+  getPageData(): Observable<SiteData> {
+    return this.http.get<SiteData>(
       '.' + this.baseHref + '../assets/pageData.json'
     );
   }

@@ -7,11 +7,14 @@ import { HeaderComponent } from '../header/header.component';
 import { ImageComponent } from '../image/image.component';
 import { ParagraphComponent } from '../paragraph/paragraph.component';
 import { CommonModule } from '@angular/common';
+import {ComponentType} from "../component-type";
+import {LayoutComponent} from "../layout/layout.component";
+import {DynamicComponentDirective} from "../dynamic-component.directive";
 
 @Component({
   selector: 'app-page',
   standalone: true,
-  imports: [FormComponent, HeaderComponent, ImageComponent, ParagraphComponent, CommonModule],
+  imports: [FormComponent, HeaderComponent, ImageComponent, ParagraphComponent, CommonModule, LayoutComponent, DynamicComponentDirective],
   templateUrl: './page.component.html',
   styleUrl: './page.component.scss',
 })
@@ -36,8 +39,10 @@ export class PageComponent implements OnInit {
     this.pageService.getPageData().subscribe((result) => {
       console.log('pages', result.pages);
 
-      this.page = result.pages.find((p) => p.pageId === pageId);
+      this.page = result.pages?.find((p) => p.pageId === pageId);
       // Handle the case where the page is not found
     });
   }
+
+  protected readonly ComponentType = ComponentType;
 }

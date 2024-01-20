@@ -1,4 +1,5 @@
 import { Component } from '../component';
+import {Layout} from "../layout/layout";
 
 export class Page {
   pageId: string;

@@ -5,31 +5,48 @@
             "title": "Home Page",
             "components": [
                 {
-                    "type": "header",
+                    "type": "layout",
                     "properties": {
-                        "text": "Welcome to Our Homepage",
-                        "cssClass": "main-header"
-                    }
-                },
-                {
-                    "type": "paragraph",
-                    "properties": {
-                        "text": "Here is some introduction about our company.",
-                        "cssClass": "intro-paragraph"
-                    }
-                },
-                {
-                    "type": "image",
-                    "properties": {
-                        "src": "/assets/images/home-intro.jpg",
-                        "alt": "Intro Image"
+                        "type": "column",
+                        "components": [
+                            {
+                                "type": "layout",
+                                "properties": {
+                                    "type": "row",
+                                    "components": [
+
+                                        {
+                                            "type": "header",
+                                            "properties": {
+                                                "text": "Welcome to Our Homepage",
+                                                "hSize": "h3",
+                                                "cssClass": "main-header"
+                                            }
+                                        },
+                                        {
+                                            "type": "image",
+                                            "properties": {
+                                                "src": "DSC_0002-small.jpg",
+                                                "alt": "Intro Image"
+                                            }
+                                        }
+                                    ]
+                                }
+                            },
+                            {
+                                "type": "paragraph",
+                                "properties": {
+                                    "text": "Here is some introduction about our company.",
+                                    "cssClass": "intro-paragraph"
+                                }
+                            }                            
+                        ]
                     }
                 }
             ]
         },
         {
             "pageId": "contact",
-            "title": "Contact Us",
             "components": [
                 {
                     "type": "header",
@@ -48,8 +65,7 @@
                 {
                     "type": "form",
                     "properties": {
-                        "action": "/submit-contact",
-                        "method": "post",
+                        "action": "email",
                         "fields": [
                             {
                                 "label": "Your Name",

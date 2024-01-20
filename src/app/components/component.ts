@@ -1,4 +1,6 @@
+import {ComponentType} from "./component-type";
+
 export interface Component {
-  type: string;
+  type: ComponentType;
   properties?: any;
 }

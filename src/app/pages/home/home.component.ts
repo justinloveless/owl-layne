@@ -18,7 +18,7 @@ export class HomeComponent {
   constructor(@Inject(APP_BASE_HREF) public baseHref: string, private http: HttpClient) {
     console.log('baseHref', baseHref);
 
-    this.http.get('.' + baseHref + '../assets/test.json').subscribe(console.log);
+    this.http.get('.' + baseHref + '../assets/pageData.json').subscribe(console.log);
 
   }
 }
